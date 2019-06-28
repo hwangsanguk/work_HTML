@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>기본</title>
+</head>
+
+<body>
+    <form>
+        First name: <br>
+        <input type="text" name="firestname"><br>
+        Last name: <br>
+        <input type="text" name="lastname">
+    </form>
+
+    <form action="/action_page.php">
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="/action_page.php">
+        First name:<br>
+        <input type="text" name="firstname" value="Mickey"><br>
+        Last name:<br>
+        <input type="text" name="lastname" value="Mouse"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <form>
+            User name:<br>
+            <input type="text" name="username"><br>
+            User password:<br>
+            <input type="password" name="psw">
+          </form>
+<hr><hr>
+<h1>날짜</h1>
+          <form>
+                Birthday:
+                <input type="date" name="bday">
+              </form>
+              <form>
+                    Enter a date before 1980-01-01:
+                    <input type="date" name="bday" max="1979-12-31"><br>
+                    Enter a date after 2000-01-01:
+                    <input type="date" name="bday" min="2000-01-02"><br>
+                  </form>
+
+                  <form>
+                        Birthday (date and time):
+                        <input type="datetime-local" name="bdaytime">
+                      </form>
+                      <form>
+                            Birthday (month and year):
+                            <input type="month" name="bdaymonth">
+                          </form>
+</body>
+
+</html>

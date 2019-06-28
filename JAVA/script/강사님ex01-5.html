@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+   <p>버튼을 눌러보세요.</p>
+
+   <button onclick="myFunction()">버튼</button>
+
+   <p id="demo"></p>
+
+   <script>
+       function myFunction() {
+           var txt;
+           var r = confirm("버튼을 누르세요!");
+           if (r == true) {
+               txt = "확인을 눌렀습니다!";
+           } else {
+               txt = "취소를 눌렀습니다!";
+           }
+           document.getElementById("demo").innerHTML = txt;}
+       
+   </script>
+</body>
+</html>

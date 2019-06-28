@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+     var test;
+        //문자열은 "" or '' 를 붙여줌
+        // \"\" => 탈출 시키는 문자
+     test = "철수가 \"안녕\"이라고 인사했다.";
+    //  test = '철수가 "안녕"이라고 인사했다' 이것도 가능
+    // test = `철수가 "안녕"이라고 인사했다` => 역따옴표 
+    document.write(typeof test + "<br>");
+        document.write(test.length + "<br>");
+        document.write(test)
+        //특정 문자만 뽑아낼 수 있음
+        document.write(test[4] + "<br>");
+
+
+     //function type
+     test1 = function() {
+         return 1;
+     } //  변수에 바로 함수를 지정해 줄 수 있음
+      
+     
+    // object type
+    test2 = {
+          name: "황상욱",
+          age: 24
+     }
+     document.write(typeof test2 + "<br>");
+     
+    
+     test3 = "abcdefg";
+     document.write(typeof test3 + "<br>");
+     document.write(test3.length + "<br>");
+    
+    
+     test4 = 123;
+     document.write(typeof test4 + "<br>");
+     document.write(test4.length + "<br>");
+    
+     //수치형 TEST
+     var  x=314e-2,
+          y=12345e10;
+     var  num1 = 999999999999999, //9가 15개
+          num2 = 9999999999999999; //9가 16개 
+
+    document.write("x = " + x + "<br>");    
+    document.write("y =  " + y + "<br>");
+    document.write("num1 =  " + (num1) + "<br>");
+    document.write("num2 =  " + (num2) + "<br>");  
+    document.write("54 / 0  =  " + (54/0) + "<br>"); //무한
+    document.write("-54 / 0  =  " + (-54/0) + "<br>"); //무한
+    document.write("88/'pi' =  " + ( 88/ 'pi' + "<br>")); 
+
+
+
+    
+    </script>
+
+</body>
+
+</html>

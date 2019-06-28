@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+        <style>
+                .jumbotron {
+                        margin-bottom: 0px;
+                        padding-bottom: 32px;
+                }
+
+                a {
+                        text-decoration: none;
+                }
+
+                .navbar {
+                        margin-bottom: 10px;
+                }
+
+                table {
+                        text-align: center;
+
+                }
+
+                .container1 .row {
+                        margin-left: 0px;
+                        margin-right: 0px;
+                        border: 1px solid black;
+                }
+
+                .container2 .row {
+                        margin-top: 10px;
+                        text-align: center;
+                }
+
+                #img1 {
+                        width: 100%;
+                }
+
+                #img2 {
+                        width: 50%;
+                        float: left;
+                }
+
+                #p1 {
+                        clear: left
+                }
+
+                .btn {
+                        background-color: #e5e5e5;
+                        border: 1px solid #e5e5e5
+                }
+
+                .form-inline {
+                        position: absolute;
+                        right: 30px;
+                }
+                .card {
+                        border-right: 5px solid #e5e5e5;
+                        border-bottom: 5px solid #e5e5e5;
+                }
+                .card-deck{
+                        margin-top: 10px;
+                }
+                .middle{
+                        text-align: center;
+                }
+
+        </style>
+</head>
+
+<body>
+        <div class="jumbotron jumbotron-fluidb text-center">
+                <div class="container">
+                        <h1>B.CrowdFunding</h1>
+                        <p>B.CrowdFunding에 오신걸 환영합니다</p>
+                </div>
+        </div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <!-- Brand/logo -->
+                <a class="navbar-brand" href="./Bootstrap_실습_card.html">B.C.F</a>
+
+                <!-- Links -->
+                <ul class="navbar-nav">
+                        <li class="nav-item">
+                                <a class="nav-link" href="./Bootstrap_실습_소개.html">회사 소개</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="./Bootstrap_실습_인재.html">인재 채용</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">오시는길</a>
+                        </li>
+                </ul>
+                <form class="form-inline" action="/action_page.php">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                </form>
+        </nav>
+        </nav>
+        <div class="container1">
+                <div class="row">
+                        <div class="col-sm-6 row">
+                                <h1>HoT Funding</h1>
+                                <table class="table table-striped">
+                                        <thead>
+                                                <tr>
+                                                        <th>FundName</th>
+                                                        <th>Target Amount(won)</th>
+                                                        <th>Achievement Rate(%)</th>
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>John</td>
+                                                        <td>1,000,000</td>
+                                                        <td>90.xx%</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Mary</td>
+                                                        <td>750,000</td>
+                                                        <td>88.xx%</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>July</td>
+                                                        <td>15,000,000</td>
+                                                        <td>80.xx%</td>
+                                                </tr>
+                                        </tbody>
+                                </table>
+
+                        </div>
+                        <div class="col-sm-6 row">
+                                <h1>New Funding</h1>
+                                <table class="table table-striped">
+                                        <thead>
+                                                <tr>
+                                                        <th>FundName</th>
+                                                        <th>Target Amount(won)</th>
+                                                        <th>Achievement Rate(%)</th>
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>Hwang</td>
+                                                        <td>12,000,000</td>
+                                                        <td>50.xx%</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Kim</td>
+                                                        <td>1,90,000</td>
+                                                        <td>30.xx%</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Bang</td>
+                                                        <td>20,000,000</td>
+                                                        <td>20.xx%</td>
+                                                </tr>
+                                        </tbody>
+                                </table>
+                        </div>
+                </div>
+        </div>
+        <!-- <div class="container2">
+                <div class="row">
+                        <div class="col-sm-4">
+                                <h1>Hello News</h1><br>
+                                <h3>"상호금융·보험·카드·캐피탈 대출 시에도 신용등급 크게 안떨어져"</h3>
+                                <p>25일부터 상호금융·보험·카드·캐피탈 등 제2금융권서 대출을 받는다해도 신용등급이 아주 큰 폭으로 떨어지진 않게 된다.
+
+                                        24일 금융위원회는 제2금융권 대출 이용자의 신용점수 하락폭을 줄이는 방안을 마련, 앞으로 제2금융권 대출자들의 신용 관리를 도울 예정이라고
+                                        밝혔다.
+
+                                        예를 들어 신용점수가 830점(신용등급 3~4등급)인 회사원 A씨가 캐피탈 신용대출을 받을 경우 신용점수가 64점이 하락해 신용등급이 5등급으로
+                                        떨어진다. 하지만 금융위의 이 같은 방안이 시행되면 신용점수 27점이 하락할 것으로 보여, 신용등급 4등급을 유지할 수 있게 된다는 것.....
+                                        <a href="">더보기</a> </p>
+                        </div>
+                        <div class="col-sm-4">
+                                <h1>기업 소개</h1>
+                                <p><img id="img1"
+                                                src="https://t1.daumcdn.net/cfile/tistory/996F18495A49A65204"><span>멀티캠퍼스는
+                                                삼성 HR 전문기업으로 기업 임직원을 대상으로......</span></p>
+                        </div>
+                        <div class="col-sm-4">
+                                <h1>인터뷰</h1>
+                                <p><img id="img2"
+                                                src="http://image.chosun.com/sitedata/image/201701/25/2017012502138_0.jpg"><b>와디즈</b>
+                                        <br> 크라우드 펀딩 대표이사 <br> (가명)황상욱 </p>
+                                <p id="p1">크라우드펀딩 업체 와디즈(Wadiz)가 설립된 것은 지난 2012년 5월의 일이다. 당시 한국에는 크라우드펀딩은 물론 핀테크에 대한 개념
+                                        정립도 제대로 돼있지 않아, 신혜성 대표이사는 회사 소개에 앞서 매번 ‘크라우드펀딩이란 무엇인가’에 대해 구구절절 설명해야만 했다.
+
+                                        그로부터 4년 후, 증권형 크라우드펀딩이 국내에 정식 도입됐다. 증권형 크라우드펀딩이란 개인이 기업이나 프로젝트에 투자해 주식·채권 등 증권을
+                                        받고 이를 통해 수익을 내는 투자 방식이다. 금융위원회가 지난해 1월 25일 정식 도입해 관리하고 있다. <a href="">이어보기 </a>
+                                </p>
+                        </div>
+                </div>
+        </div>   190625/wook/ div대신 카드 사용으로 주석처리-->
+
+        <div class="card-deck">
+                <div class="card">
+                <div class="card-body">
+                        <h1>Hello News</h1><br>
+                        <h3>"상호금융·보험·카드·캐피탈 대출 시에도 신용등급 크게 안떨어져"</h3>
+                        <p class="card-text">25일부터 상호금융·보험·카드·캐피탈 등 제2금융권서 대출을 받는다해도 신용등급이 아주 큰 폭으로 떨어지진 않게 된다.
+
+                                24일 금융위원회는 제2금융권 대출 이용자의 신용점수 하락폭을 줄이는 방안을 마련, 앞으로 제2금융권 대출자들의 신용 관리를 도울 예정이라고
+                                밝혔다.
+
+                                예를 들어 신용점수가 830점(신용등급 3~4등급)인 회사원 A씨가 캐피탈 신용대출을 받을 경우 신용점수가 64점이 하락해 신용등급이 5등급으로
+                                떨어진다. 하지만 금융위의 이 같은 방안이 시행되면 신용점수 27점이 하락할 것으로 보여, 신용등급 4등급을 유지할 수 있게 된다는 것.....
+                                <a href="">더보기</a>/p>
+                </div></div>
+                <div class="card">
+                <div class="card-body">
+                        <h1 class="middle">기업 소개</h1>
+                        <p class="card-text"><img id="img1"
+                                        src="https://t1.daumcdn.net/cfile/tistory/996F18495A49A65204"><span>멀티캠퍼스는
+                                        삼성 HR 전문기업으로 기업 임직원을 대상으로......</span></p>
+                </div></div>
+                <div class="card">
+                <div class="card-body">
+                        <h1 class="middle">인터뷰</h1>
+                        <p class="card-text"><img id="img2"
+                                        src="http://image.chosun.com/sitedata/image/201701/25/2017012502138_0.jpg"> <span id="span1"><b>와디즈</b>
+                                <br> 크라우드 펀딩 대표이사 <br> (가명)황상욱</span> </p>
+                        <p id="p1" class="card-text">크라우드펀딩 업체 와디즈(Wadiz)가 설립된 것은 지난 2012년 5월의 일이다. 당시 한국에는 크라우드펀딩은 물론
+                                핀테크에 대한 개념
+                                정립도 제대로 돼있지 않아, 신혜성 대표이사는 회사 소개에 앞서 매번 ‘크라우드펀딩이란 무엇인가’에 대해 구구절절 설명해야만 했다.
+
+                                그로부터 4년 후, 증권형 크라우드펀딩이 국내에 정식 도입됐다. 증권형 크라우드펀딩이란 개인이 기업이나 프로젝트에 투자해 주식·채권 등 증권을
+                                받고 이를 통해 수익을 내는 투자 방식이다. 금융위원회가 지난해 1월 25일 정식 도입해 관리하고 있다. <a href="">이어보기 </a>
+                        </p>
+                </div></div>
+        </div>
+
+</body>
+
+</html>

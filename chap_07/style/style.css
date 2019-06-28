@@ -1,0 +1,28 @@
+h2 {
+    color: black;
+    margin-left: 30px;
+}
+
+p {
+    color: tomato;
+    margin-left: 30px;
+}
+
+/* id selcetor 는 #을 붙임 */
+#second {
+    color: aqua;
+    margin-left: 30px
+}
+
+/* class selector 는 . 을 붙임*/
+.city {
+    color: darkorange;
+    margin-left: 45px
+}
+
+/* p 태그 중에서 클래스가 city 인 애들만 바꾼다 */
+p.city {
+    text-align: center;
+}
+
+/* 주석을 달때는 이런식으로 (sangwook_190620: 주석 이유) 표시를 남겨야함 */

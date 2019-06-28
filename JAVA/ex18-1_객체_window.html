@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+        <h1>window 객체 테스트</h1>
+        <button onclick="win_open();">윈도우 오픈</button>
+        <button onclick="win_move();">윈도우 이동</button>
+        <button onclick="win_resize();">윈도우 크기변경</button>
+        <button onclick="win_close();">윈도우 닫기</button>
+       
+     
+     
+        <script>
+            var targetWindow;
+     
+            function win_open() {
+                targetWindow = window.open("https://www.naver.com", "pop1", "width=400, height=500, left=50, top=10, \
+                scrollbars=no, toolbars=no, location=no");
+            }
+            
+     
+            function win_move() {
+                alert(targetWindow);
+                targetWindow.moveTo(300, 500);
+                targetWindow.focus();
+            }
+     
+            function win_resize() {
+               
+                targetWindow.resizeTo(600, 400);
+                targetWindow.focus();
+            }
+            function win_close() {
+          
+          targetWindow.close();
+            }
+  </script>
+</body>
+
+     
+
+</html>

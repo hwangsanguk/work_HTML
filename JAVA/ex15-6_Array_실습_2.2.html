@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Array Test</h1>
+    <script>
+        let name= ["이름", "국어", "영어", "수학"]
+        let score= ["학생A", 50, 60, 70, "학생B", 58, 70, 95, "학생C",80, 100, 70]
+        name.push("합계");
+        name.push("평균");
+        document.write("<table border=1>");
+        document.write("<tr>");
+        for (let i = 0; i < name.length; i++) {
+            document.write("<th>" + name[i] +"</th>"); 
+        }
+        document.write("</tr>");
+        
+        for (let i = 0; i < score.length;) {
+            let student = score.splice(0,4);
+            const sum = student[1] + student[2] + student[3];
+            const avg = sum /3;
+            student.push(sum);
+            student.push(avg);
+            document.write("<tr>");
+            for (let j = 0; j < student.length; j++) {
+                document.write("<td>"+student[j]+"</td>");
+            }
+            document.write("</tr>");
+            console.log(score.length);
+            
+        }
+
+       
+      
+        document.write("</table>");
+
+    </script>
+</body>
+
+</html>

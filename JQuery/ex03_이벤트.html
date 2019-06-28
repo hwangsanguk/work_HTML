@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <script>
+               $(function() {
+           $('#btn1').mouseover(function() {
+               $('#t1').css({'font-size': '100px'});
+               $('.classp').hide();
+
+           });
+           $('#btn2').click(function() {
+               $('#t1').show();
+               $('.classp').show();
+           });
+       });
+
+
+
+        </script>
+        
+        <style>
+        
+        </style>
+</head>
+
+<body>
+                <h3 id="t1"> 자바스스크립트 프로그래밍 </h3>
+
+                <p class = "classp">fdsafdsafdsa</p>
+                <p class="classp">fdsafdsafdsa</p>
+                <p class="classp">fdsafdsafdsa</p>
+                <p class="classp">fdsafdsafdsa</p>
+                <div class="classp" style="width:100px; height:100px; background-color:red;"></div>
+                <hr>
+                <button id="btn1" >
+                    버튼1
+                </button>
+                <button  id="btn2" >
+                    버튼2
+                </button>
+      
+        <script>
+                
+        </script>
+
+</body>
+
+</html>

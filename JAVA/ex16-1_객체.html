@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>T</h1>
+    <script>
+        let score = [10, 20, 30];
+        let data = new Array(10, 20, 30);
+
+        //내부적으로 method를 가지고 있음
+
+        let newobj = { name: "황상욱", age: 30 };
+        // key 이름에는 "" 필요
+
+        console.log(newobj);
+        console.log(newobj.name);
+        console.log(newobj.age);
+        console.log(newobj["name"]);
+        console.log(newobj["age"]);
+
+        console.log(score);
+
+        var d1 = new Date();  // ❶ 현재 날짜 및 시간 표시
+        var d2 = new Date(2018, 0, 1, 0, 0, 1);  // ❷ 2018년 1월 1일 0시 0분 1초 표시
+        var d3 = new Date(500000000000);  // ❸ 1970년 1월 1일 이후의 경과시간(밀리초) 표시
+        var d4 = new Date(2000, 12, 25);  // ❹ 지정된 시간(dateString) 표시 
+        var d5 = new Date(2019, 00,01)
+
+        document.write(d5 + "<br>");
+        document.write(d1 + "<br>");
+        document.write(d2 + "<br>");
+        document.write(d3 + "<br>");
+        document.write(d4 + "<br>");
+        
+        var diff = d1.getTime() - d2.getTime()
+        document.write(diff , "<br>");
+        document.write(diff / 1000 , "<br>");
+        document.write(diff / (1000 * 60) , "<br>");
+        document.write(diff / (1000 * 60 * 60) , "<br>");
+        document.write(diff / (1000 * 60 * 60 * 24) , "<br>");        
+
+
+    </script>
+
+</body>
+
+</html>

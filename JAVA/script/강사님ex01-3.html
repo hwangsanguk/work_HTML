@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+   <script>
+       var myname = "홍길동";
+       var email = "hong@email.com";
+       var num1 = 10;
+       var num2 = 12.345;
+   </script>
+</head>
+
+<body>
+
+   <h1>변수 테스트</h1>
+
+   <button onclick="printalert();">경고창 출력</button>
+   <br>
+   <script>
+       // 웹 문서 출력
+       document.write(myname + '<br>');
+       document.write(email + '<br>');
+       document.write(num1 + '<br>');
+       document.write(num2 + '<br>');
+
+       // console.log 출력 (콘솔창)
+       console.log(myname);
+       console.log(email);
+       console.log(num1);
+       console.log(num2);
+
+       // 경고창 출력
+       function printalert() {
+           alert(myname + ', ' + email);
+       }
+
+   </script>
+</body>
+
+</html>

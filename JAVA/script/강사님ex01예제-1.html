@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+
+</head>
+
+<body>
+
+
+   <h1>성적처리결과</h1>
+   <hr>
+
+ <script>
+function ff(){
+var kor = document.getElementById("kor").value;
+var eng = document.getElementById("eng").value;
+var math = document.getElementById("math").value;
+var total = Number(kor) + Number(eng) + Number(math);
+var avg = total / 3
+console.log(kor);
+console.log(eng);
+console.log(math);
+console.log(total);
+console.log(avg);
+document.getElementById("total").innerHTML = total;
+document.getElementById("avg").innerHTML = avg;
+}         
+        // var kor = "국어" ;
+        // var math = "수학" ;
+        // total = + Number(kor) + Number(math);
+        // avg = total / 2;
+        // document.write(name);
+        // ;
+        // document.write(kor);
+        // ;
+        // document.write(math);
+        // 
+        // document.write("<table border=1 >");
+        // document.write("<tr><td>국어</td> <td>" + kor + "</td></tr>");
+        // document.write("<tr><td>수학</td><td>" + math + "</td></tr>");
+        // document.write("<tr><td>영어</td><td>" + eng + "</td></tr>");
+        // document.write("<tr><td>총점</td> <td>" + total + "</td></tr>");
+        // document.write("<tr><td>평균</td> <td>" + avg + "</td</tr>");
+        // document.write("</table>");
+    </script>
+국어:<input tpye="number" id="kor" maxlength="3"><br>
+영어:<input tpye="number" id="eng" maxlength="3"><br>
+수학:<input tpye="number" id="math" maxlength="3"><hr>
+
+<button onclick="ff()">계산</button><br>
+
+
+총점<p id="total"></p>
+평균<p id="avg"></p>
+
+</body>
+
+</html>

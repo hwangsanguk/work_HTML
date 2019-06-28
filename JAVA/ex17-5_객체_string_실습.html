@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+    <hr>
+    <script>
+        //강사님 풀이
+      var data = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`;
+        var alpha= {};
+        data = data.toUpperCase();
+        var numa = 0;
+
+
+
+        for(let i=0; i<data.length; i++){
+            let curChar = data[i];
+            if (curChar == ' ') continue; 
+            if (curChar == '.') continue;
+            if (curChar == "'") continue;
+            if (curChar == ",") continue;
+            if (curChar >= '0' && curChar <= '9') continue;
+            console.log(alpha);
+            //오브젝트 생성을 위한 준비 alpha 오브젝트에 key:count를 저장하고 싶음
+            //그렇게 하기 위해서 !alpha[curchar] not alpha오브젝트 즉, 
+            //undefined 된 애들을 찾아서 걔네들은 1이라고 하고
+            //else 로 넘겨서 alpha들을 카운트 시키는 방법
+            if(!alpha[curChar]) { 
+                alpha[curChar] =1;
+                console.log(alpha);
+        
+            }else {
+                alpha[curChar] ++;
+        
+            }
+        }
+            
+        document.write("<br>");
+        console.log(alpha);
+        
+
+
+        
+        var arr =data.split(" ");//문제 2-2
+        document.write(arr.length);
+
+        
+    </script>
+
+</body>
+
+</html>

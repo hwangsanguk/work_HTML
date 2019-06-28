@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<style>
+        table,
+        th,
+        td {
+                border: 1px solid darkblue;
+                /*border-collaps: collapse;*/
+        }
+</style>
+
+<body>
+        <form action="/action_page.php">
+        <table style="width: 100%;">
+                <tr>
+                        <td style="text-align: center">이름</td>
+                        <td>
+                                <input type="text">
+                        </td>
+                </tr>
+                <tr>
+                        <td style="text-align: center">주민등록번호</td>
+                        <td>
+                                <input type="text" name="앞자리" maxlength="6">-<input type="password" name="뒷자리"
+                                        maxlength="7">
+                        </td>
+                </tr>
+                <tr>
+                        <td style="text-align: center">생년월일</td>
+                        <td>
+                                <input type="date" nmae="bday">
+                        </td>
+                </tr>
+                <tr>
+                        <td style="text-align: center">아이디</td>
+                        <td>
+                                <input type="text">
+                        </td>
+                </tr>
+                <tr>
+                        <td style="text-align: center">비밀번호</td>
+                        <td>
+                                <input type="password" minlength="6"> 영문/숫자 포함 6자 이상
+                        </td>
+                </tr>
+                <tr>
+                        <td style="text-align: center">비밀번호확인</td>
+                        <td>
+                                <input type="password" minlength="6">
+                        </td>
+                </tr>
+
+                <tr>
+                        <td style="text-align: center">취미</td>
+                        <td>
+                                <select name="취미">
+                                        <option value="영화">영화</option>
+                                        <option value="독서">독서</option>
+                                        <option value="음악">음악</option>
+                                        <option value="운동">운동</option>
+                                        <option value="게임">게임</option>
+                                </select>
+                        </td>
+                </tr>
+                <tr>
+                        <td style="text-align: center">이메일</td>
+                        <td>
+                                <input type="text">@<input type="text"> <input list="browsers" size="10">
+                                <datalist id="browsers">
+                                        <option value="naver.com">naver.com</option>
+                                        <option value="daum.net">daum.net</option>
+                                        <option value="google.com">google.com</option>
+                                        <option value="nate.com">nate.com</option>
+                                </datalist>
+                        </td>
+                </tr>
+                <tr>
+                        <td style="text-align: center">주소</td>
+                        <td>
+                                <input type="text">
+                        </td>
+                </tr>
+                <tr>
+                        <td style="text-align: center">전화번호</td>
+                        <td>
+                                <input type="text">
+                        </td>
+                </tr>
+                <tr>
+                        <td style="text-align: center">핸드폰번호</td>
+                        <td>
+                                <input type="text">
+                        </td>
+                </tr>
+                <tr>
+                        <td style="text-align: center">직업</td>
+                        <td>
+                                <select name="직업">
+                                        <option value="학생">학생</option>
+                                        <option value="회사원">회사원</option>
+                                        <option value="자영업">자영업</option>
+                                        <option value="무직">무직</option>                                                                        
+                                </select>
+                        </td>
+                </tr>
+                <tr>
+                        <td style="text-align: center">메일/sns 정보 수신</td>
+                        <td>
+                                <input type="radio" name="sns" value="y" checked>수신 <input type="radio" name="sns" value="n">비수신
+                        </td>
+                </tr>
+                <tr>
+                        <td style="text-align: center">회원종류</td>
+                        <td>
+                                <input type="radio" name="member" value="1" checked>일반회원 <input type="radio" name="member" value="2">기업회원<input type="radio" name="member" value="3">기관회원<input type="radio" name="member" value="4">관리자
+                        </td>
+                </tr>
+                <tr>
+                        <td style="text-align: center">정보공개여부</td>
+                        <td>
+                                        <select name="정보공개여부" id="id1">
+                                                        <option value="동의">동의</option>
+                                                        <option value="비동의">비동의</option>                                                                      
+                                        </select><label for="id1"></label>
+                        </td>
+                </tr>
+                <tr>
+                        <td colspan="2" style="text-align: center"><input type="submit" value="회원 가입"> <input type="submit" formaction="/action_page2.php" value="취소"></td>
+                </tr>
+
+        </table>
+        
+</form>
+
+</body>
+
+</html>

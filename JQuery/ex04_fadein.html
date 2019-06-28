@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <script>
+        $(document).ready(function () {
+           $("#b1").click(function () {
+               $("#div1").fadeToggle();
+               $("#div2").fadeToggle("slow");
+               $("#div3").fadeToggle(3000);
+           });
+       });
+       
+
+
+        </script>
+        
+        <style>
+        
+        </style>
+</head>
+
+<body> <p>Demonstrate.fadeToggle() with different parameters.</p>
+
+    <button id="b1">박스 나타내기</button><br><br>
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+        <script>
+                
+        </script>
+
+</body>
+
+</html>

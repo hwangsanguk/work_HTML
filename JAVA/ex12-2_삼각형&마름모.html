@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+
+    </style>
+</head>
+<body>
+
+
+    <script>
+//   let num = Number(prompt("num","입력"));
+// let num = Number(prompt("숫자", "숫자입력"));
+// for (let i=0; i < num; i++) {
+  
+//     document.write("*");
+//     for(let j=0; j < num-1; j++){
+//         document.write("&")
+//     }
+//     document.write("<br>")
+// }
+/*
+let num = Number(prompt("숫자", "숫자입력"));
+for (let i=0; i < num; i++) { //높이
+  
+    for(let j=0; j < i+1; j++){ //별 쌓아야함
+        document.write("*")
+
+    }
+    document.write("<br>")
+}*/
+
+let num2 = Number(prompt("숫자", "숫자입력"));
+for (let i=0; i < num2; i++) { //높이
+    for(let k=num2; k >i ; k= k-1){
+        document.write("&nbsp;");
+    }
+    for(let j=1; j <= 2*i+1; j++){ //별 쌓아야함
+        document.write("*");
+    }
+    document.write("<br>");
+}
+for (let i=0; i < num2+1; i++) { //높이
+    for(let k=0; k <i ; k++){
+        document.write("&nbsp;");
+    }
+    for(let j=2*num2+1; j >=2*i+1; j--){ //별 쌓아야함
+        document.write("*");
+    }
+    document.write("<br>");
+}
+
+
+
+//   do{
+//       text += "<br>*" + i; i= i +"*";
+//   } while (i < );
+//   document.write(text)
+
+  
+  
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>셀렉터 실습</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    /* #p1{
+    color: rgb(39, 174, 96);
+    background-image: url("jpg/image06.jpg") */
+/* } */
+#bgtest{
+    width: 50%;
+    height: 100px;
+    background-image:url("jpg/123.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid red;
+  border-radius: 12px;
+}
+    /* p {
+    margin: 100px;
+    padding: 50px;
+  border-top-style: dotted;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border: 2px solid red;
+  border-radius: 5px;
+} */
+    /* 공백(margin) */
+    #p2 {
+        border: 1px solid black;
+        margin: 30px 60px 90px 120px;
+        background-color: aqua;
+        width: 400px;
+        /* 중앙정렬 0 auto */
+        margin: 10px auto;
+        padding: 50px;
+        box-sizing: border-box;
+        /* 아웃라인 */
+        outline-style: solid;
+  outline-color: red;
+    }
+
+    #p3 {
+        border: 10px solid blue;
+        /* margin: 30px 60px 90px 120px; */
+        /* background-color: aqua */
+        width: 400px;
+        /* 중앙정렬 0 auto */
+        margin: 10px auto;
+        padding: 50px;
+        box-sizing: content-box;
+    }
+    span{ 
+        width: 600px;
+        text-align: center;
+        border: 1px solid bluse;
+
+    }
+</style>
+
+<body>
+    <div id=bgtest>
+
+    </div>
+    <span>스팬태그</span>
+
+    <h1>셀렉터 실습-2 </h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <p id=p2>What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.</p>
+    <p>
+        Why do we use it?
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at
+        its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+        opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+        packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
+        will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
+        accident, sometimes on purpose (injected humour and the like).</p>
+
+
+    <h2>Heading 2</h2>
+
+
+    <p id="p3">가나다라 마바사 아자 차카 타타타타타타타타타</p>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>행운 번호</h1>
+    <hr>
+    <script>
+        /* 내 생각
+        var random1 = Math.floor(Math.random() * 40) + 1;
+        var random2 = Math.floor(Math.random() * 40) + 1;
+        var random3 = Math.floor(Math.random() * 40) + 1;
+        var random4 = Math.floor(Math.random() * 40) + 1;
+        var random5 = Math.floor(Math.random() * 40) + 1;
+        var random6 = Math.floor(Math.random() * 40) + 1;
+
+        document.write(random1, "&nbsp;", random2, "&nbsp;", random3, "&nbsp;", random4, "&nbsp;", random5, "<br>");
+        document.write("보너스 :", random6);
+        document.write("<br>")
+        */
+
+
+        var lotto = []; //배열과 for 구문 이용하여 만든것
+
+        for (let i = 0; i < 6; i++) {
+            lotto.push(Math.floor(Math.random() * 45)+1);
+
+        }
+            document.write(lotto);
+        
+    </script>
+
+</body>
+
+</html>

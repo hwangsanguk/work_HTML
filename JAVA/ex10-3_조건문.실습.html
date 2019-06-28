@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 50%;
+        float: left;
+        }
+    </style>
+</head>
+<body>
+        <p>회원탈퇴 하시겠습니까?</p>
+
+        <button onclick="myFunction()">버튼</button>
+     
+        <p id="demo"></p>
+     
+    <script>
+ function myFunction() {
+           var txt;
+           var r = confirm("회원 탈퇴 확인 창");
+           if (r == true) {
+               txt = "회원을 탈퇴하였습니다.";
+           } else {
+               txt = "회원 탈퇴를 취소하였습니다.";
+           }
+           document.getElementById("demo").innerHTML = txt;}
+         
+    </script>
+    <h2>과제 3</h2>
+    <div id="b1" onclick="check('b1')">1</div>
+    <div id="b2" onclick="check('b2')">2</div>
+    <div id="b3" onclick="check('b3')">3</div>
+    <div id="b4" onclick="check('b4')">4</div>
+    <div id="b5" onclick="check('b5')">5</div>
+    <script>
+        function check(b) {
+            if (b == b1) {
+                alert("당첨")
+            }  else {
+                alert("꽝")
+            }
+        }
+        
+    </script>
+
+</body>
+
+</html>

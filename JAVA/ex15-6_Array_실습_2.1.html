@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Array Test</h1>
+    <script>
+        let name= ["이름", "국어", "영어", "수학"]
+        let score= ["학생A", 50, 60, 70, "학생B", 58, 70, 95, "학생C",80, 100, 70]
+       
+        document.write("<table border=1>")
+        document.write("<tr>")
+        for(i=0; i <name.length; i++){
+            document.write("<td>",name[i], " ","</td>");
+        }
+        document.write("<td>","총점","</td>")
+        document.write("<td>","평균","</td>")
+        document.write("</tr>");
+        document.write("<tr>");
+        for(j=0; j<name.length; j++){
+            score1 = score.slice(0,4);
+            sum1 = score1[1]+score1[2]+score1[3]
+            avg1 = sum1 / 3
+            console.log(score1)
+            document.write("<td>",score1[j], " ","</td>");
+        }
+        document.write("<td>",sum1,"</td>")
+        document.write("<td>",avg1,"</td>")
+        document.write("</tr>");
+
+        document.write("<tr>");
+        for(j=0; j<name.length; j++){
+            score2 = score.slice(4,8);
+            sum2 = score2[1]+score2[2]+score2[3]
+            avg2 = sum2 / 3
+            console.log(score2)
+            document.write("<td>",score2[j], " ","</td>");
+        }
+        document.write("<td>",sum2,"</td>")
+        document.write("<td>",avg2,"</td>")
+        document.write("</tr>");
+
+        document.write("<tr>");
+        for(j=0; j<name.length; j++){
+            score3 = score.slice(8,12);
+            sum3 = score3[1]+score3[2]+score3[3]
+            avg3 = sum3 / 3
+            console.log(score3)
+            document.write("<td>",score3[j], " ","</td>");
+        }
+        document.write("<td>",sum3,"</td>")
+        document.write("<td>",avg3,"</td>")
+        document.write("</tr>");
+
+        document.write("</table>");
+
+    </script>
+</body>
+
+</html>

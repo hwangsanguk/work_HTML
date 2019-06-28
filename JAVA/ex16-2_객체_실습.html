@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+    <script>
+      var d1 = new Date(2019, 05, 25, 21, 00,)
+      var d2 = new Date(2020,00,01)
+        var diff = d2.getTime() - d1.getTime()
+        document.write("오늘은", d1.getFullYear(),"년",d1.getMonth(),"월", d1.getDate(),"일",d1.getDay(),"이고, 현재시각",d1.getHours(),"시",d1.getMinutes(),"분 입니다.","<hr>");
+        document.write("새해 첫 날까지는",diff / (1000 * 60 * 60 * 24),"일이 남았습니다");
+    </script>
+
+</body>
+
+</html>

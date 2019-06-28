@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+   <script>
+       var myname = "홍길동";
+       var email = "hong@email.com";
+       var num1 = 10;
+       var num2 = 12.345;
+   </script>
+</head>
+
+<body>
+
+   <h1>성적처리결과</h1>
+   <hr>
+
+ <script>
+        var kor = prompt("국어 성적은");
+        var math = prompt("수학 성적은 ?");
+        var eng = prompt("영어 성적은 ?");
+        total = Number(eng) + Number(kor) + Number(math);
+        avg = total / 3;
+        document.write("<table border=1 >");
+        document.write("<tr><td>국어</td> <td>" + kor + "</td></tr>");
+        document.write("<tr><td>수학</td><td>" + math + "</td></tr>");
+        document.write("<tr><td>영어</td><td>" + eng + "</td></tr>");
+        document.write("<tr><td>총점</td> <td>" + total + "</td></tr>");
+        document.write("<tr><td>평균</td> <td>" + avg + "</td</tr>");
+        document.write("</table>");
+    </script>
+
+</body>
+
+</html>

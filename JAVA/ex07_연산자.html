@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h3>연산자</h3>
+    <script>
+        //산술
+        var unit_price = 10;
+        var qty = 20;
+        var total = unit_price ** qty;
+
+        // %연산자는 나머지를 계산해줌
+
+        //할당 연산자
+
+        var num1 = 100;
+        var num2 = 2;
+
+        document.write("num1 = ", num1, "<br />");
+        document.write("num2 = ", num2, "<br />");
+        num1 = 50;
+        document.write("num1 = 50; num1 = ", num1, "<br />");
+        num1 += 10;
+        document.write("num1 += 10; num1 = ", num1, "<br />");
+        num1 -= 20;
+        document.write("num1 -= 5; num1 = ", num1, "<br />");
+        num1 *= num2;
+        document.write("num1 *= num2; num1 = ", num1, "<br />");
+
+
+
+
+        //비교연산자
+        id = "hong";
+        age > 24;
+        hour < 18;
+        id != "hong";
+
+        age === 10;
+        age == 10;
+        age == "10";
+
+        age = document.getElementById("age");
+
+        //논리 연산자
+        var a = 10001;
+        var b = 3;
+        var totla = a % 2;
+
+
+        (kor > 60 && kor <= 70);
+        (kor > 80 || eng > 80);
+        !(kor > 80);
+        !(kor > 80 || eng>80);  //국어성적이 80점이상이 아니거나 영어 성적이 80점 이상이 아니거나
+        
+
+    </script>
+
+</body>
+
+</html>

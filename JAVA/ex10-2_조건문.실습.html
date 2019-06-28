@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <!-- <script>
+        var result = Number(prompt('숫자입력', '숫자'));
+        console.log(result)
+        var result2 = Number(result % 2);
+        console.log(result2);
+            if ( result2 == 0 ) {
+                greeting = "짝수입니다.";
+
+            }  else { 
+               greeting = "홀수입니다.";
+             }   
+             document.getElementById("demo").innerHTML = greeting;    
+    </script> -->
+    <h2>실습과제 2-2</h2>
+    <p id="demo"></p>
+    <script>
+        var result = Number(prompt('태어난 달', '숫자'));
+        console.log(result)
+        if (result >= 3 && result <= 5) {
+            greeting = "봄입니다.";
+        } else if (result >= 6 && result <= 8) {
+            greeting = "여름이에여";
+        } else if (result >= 9 && result <= 11) {
+            greeting = "가을이다~";
+        } else if (result == 12 || result <= 2) {
+            greeting = "눈싸움 ㄱㄱ";
+        } else {
+            greeting = "값을 다시 입력해주세요";
+        }
+        document.write(greeting)
+
+        document.getElementById("demo").innerHTML = greeting; 
+    </script>
+
+
+</body>
+
+</html>

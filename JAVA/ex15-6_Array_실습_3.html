@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Array Test</h1>
+    <button onclick="list()">전화번호부 보기</button>
+    <script>
+        function list(){
+            let name = [["황상욱","01092702260"], ["황상훈","01030716988"], ["임미경","01045284687"],["황동원","01064326988"]];
+            for (let i = 0 ; i < name.length; i++){
+                document.write(i+1,":", name[i],"<br>")
+            }
+
+        }
+    </script>
+</body>
+
+</html>
