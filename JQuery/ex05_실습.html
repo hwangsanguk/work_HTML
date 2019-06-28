@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+
+        <title> jQuery 주소 리스트</title>
+        <!-- 
+    이름, 전화번호, 주소를 입력 받아 리스트에 추가하는 전화번호부를 작성.
+
+    각 사용자 정보는 객체 배열을 이용해 저장
+    (jQuery after 나 append 기능을 이용)
+    
+-->
+        <style>
+                /* *{
+                        border: 1px solid red;
+                } */
+                #uname ,#uaddress{
+                        margin: auto;
+                        width:150px;
+                                       }
+
+                 #unumber{
+                        margin-left: auto;
+                        width: 150px;
+                }
+                button{
+                        margin: 0 auto;
+                }
+
+        </style>
+ 
+        <script>
+                $(document).ready(function () {
+                        $('#btn1').click(function () {
+                                let uname = $('#uname').val();
+                                let unumber = $('#unumber').val();
+                                let uaddress = $('#uaddress').val();
+                                $('table').append('<tr> <td>' + uname + '</td>' + '<td>' + unumber + '</td>' + '<td>' + uaddress + '</td> </tr> ');
+                        });
+                });
+
+        </script>
+
+</head>
+
+
+
+<body>
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                        <br>
+                        이름 :<input type="text" id="uname" placeholder="이름을 입력하세요">
+                        <br>
+                        전화번호 : <input type="text" id="unumber" placeholder="전화번호를 입력하세요">
+                        <br>
+                        주소 : <input type="text" id="uaddress" placeholder="주소를 입력하세요">
+                        <br>
+                        <button id="btn1">추가</button>
+                </div>
+        </div>
+
+        <div class="container">
+
+
+                <p> 전화번호부 </p>
+                <script>
+
+                </script>
+
+                <table class="table">
+                        <tr>
+                                <th>이름</th>
+                                <th>전화번호</th>
+                                <th>주소</th>
+                        </tr>
+                </table>
+
+        </div>
+</body>
+
+
+</html>
