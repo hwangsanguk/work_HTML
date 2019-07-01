@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).on('click', '.btn2', function () {
+            let html = $(this).parent().parent();
+            html.remove();
+            console.log('btn2');
+        });
+
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                let todoInput = $("#todoInput").val();
+                $('#todoInput').val('');
+                $(function btn1(){
+                    $("#todoInput").focus();
+                });
+                $('table').append('<tr> <td class="id1">' + todoInput + '</td>' + '<td>' + '<input type="button" class="btn2" value="X"></input>' + '</td> </tr>'); 
+            });
+        
+            $('#todoInput').keydown(function (key) {
+                if (key.keyCode == 13) {
+                    let todoInput = $("#todoInput").val();
+                    $('#todoInput').val('');
+                    $('table').append('<tr> <td class="id1">' + todoInput + '</td>' + '<td>' + '<input type="button" class="btn2" value="X"></input>' + '</td> </tr>');
+                    // 엔터키 눌렸을 때 할 일들                    
+
+                }
+            });
+        });
+        $(document).on('click', '.id1', function() {
+            $(this).append("@(" + new Date() + ")");
+            $(this).css('text-decoration','line-through').css('color','grey');
+        })
+
+
+    </script>
+
+    <style>
+        /* *{
+                border: 1px solid red;
+            } */
+        .jumbotron {
+            text-align: center;
+            width:70%;
+            margin: 5px auto; 
+        }
+
+        #todoInput {
+            border-color: gainsboro;
+        }
+
+        table {
+            width: 70%;
+            margin:0px auto;
+            
+        }
+        td{
+            text-align: right;
+        }
+        .id1 {
+            text-align: left;
+        }
+
+
+
+
+        tr {
+            border: 1px solid rgb(169, 201, 214);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1>Todo List</h1> <br>
+            <input type="text" id="todoInput" autofocus placeholder="Title.."><button id="btn1">추가</button>
+        </div>
+    </div>
+    <table id="table">
+    </table>
+    <script>
+
+    </script>
+
+</body>
+
+</html>
