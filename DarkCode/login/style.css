@@ -16,7 +16,7 @@ body{
 }
 .box h1{
     color: white;
-    text-transform: uppercase;
+    text-transform: uppercase;  /*글자를 대문자로 바꾸어줌 */
     font-weight: 500;
 }
 
@@ -33,7 +33,7 @@ body{
     color: white;
     border-radius: 24px;
     transition: 0.5s;
-    /* transition으로 focus했을대 늘어나는 시간을 조정 */
+    /* transition으로 focus했을때 늘어나는 시간을 조정 */
 }
 
 .box input[type = "text"]:focus, .box input[type = "password"]:focus{

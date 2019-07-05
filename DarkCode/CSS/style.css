@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background: #000;
+}
+
+.container{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%); /*모니터 정가운데 배치*/
+    width: 100%;
+}
+.container span{
+    text-transform: uppercase;
+    display: block;
+}
+.text1{
+    color: white;
+    font-size: 60px;
+    font-weight: 700; /*글자의 너비 */
+    letter-spacing: 8px;  /* 글자간 간격  */
+    margin-bottom: 20px; 
+    background: black;
+    position: relative;
+    animation: text 3s 1;
+}
+.text2{
+    font-size: 30px;
+    color: #6ab04c;
+}
+
+@keyframes text{ /* 천천히 생각해 볼것  글자의 애니메이션*/
+    0%{ /* 천천히 생각해 볼것  글자의 애니메이션*/
+        color: black;
+        margin-bottom: -40px;
+    }
+    30%{ /* 천천히 생각해 볼것  글자의 애니메이션*/
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }  85%{ /* 천천히 생각해 볼것  글자의 애니메이션*/
+        letter-spacing: 8x;
+        margin-bottom: -40px;
+    }
+  
+}
