@@ -1,0 +1,227 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Y.W.I</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        /* *{
+        border: 1px solid blue;
+    } */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #F8F9F9;
+        }
+        div {
+            margin: 0;
+            padding: 0;
+        }
+        .banner{
+            padding: 1px;
+            background-image: linear-gradient(to left,#f2f2f2,#dedede )
+            
+        }
+        .login, .signin {
+            margin-top: 35px;
+            text-decoration: none;
+            text-align: center;
+            color: gray;
+            float: right;
+            margin-right: 50px;
+            display: block;
+        }
+        
+        .signin:hover, .login:hover{
+            text-decoration: none;
+            color: gray;
+        }
+        
+        .name {
+            margin-top: 10px;
+            margin-left: 10px;
+            font-size: 25px;
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        li {
+            width: 20%;
+            float: left;
+            text-align: center;
+        }
+
+        .nav {
+            padding: 5px;
+            background-color: #f1f1f1;
+            border-top: 1px solid black;
+            display: block;
+            text-decoration: none;
+            color: black;
+        }
+
+        li a.active {
+            color: black;
+            background-color: #ddd;
+        }
+
+
+        .nav:hover {
+            background-color: #ddd;
+            text-decoration: none;
+            color: black;
+        }
+
+        img.img1 {
+            width: 100%;
+            height: 400px;
+        }
+
+        /* 우측 차트 */
+        .chart {
+            border-left: 1px solid #D0D3D4;
+            padding: 50px;
+            padding-top: 0;
+            display: block;
+            float: right;
+
+        }
+
+        .rankname {
+            text-align: center;
+            font-size: 30px;
+            padding: 0;
+            font-weight: 50px;
+        }
+
+        .tableimg {
+            width: 150px;
+            height: 100px;
+        }
+
+        table {
+
+            width: 350px;
+        }
+
+        .num {
+            text-align: center;
+        }
+
+        .rank {
+            width: 50px;
+        }
+
+        /* 좌측 */
+        .contents {
+            margin: 0;
+            padding: 0;
+        }
+
+        .pic {
+            width: 20%;
+            margin: 10px;
+        }
+
+        .mv {
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="banner">
+        <form action="" class="banner">
+
+        <% if(locals.id) {%>
+            <%= id %> 님 환영합니다.
+            <script>
+            $('.login_hide').hide();
+            </script>
+        <%}%>
+        <a href="/signin" class="signin">회원가입</a>
+        <a href="/login" class="login">로그인</a>
+        <h3 class="name">You.Want.It?</h3>
+    </form>
+    </div>
+    <ul>
+        <li><a href="#" class="nav active"><b> 추천</b></a></li>
+        <li><a href="#" class="nav">얼리버드</a></li>
+        <li><a href="#" class="nav">기획전</a></li>
+        <li><a href="#" class="nav">트렌드</a></li>
+        <li><a href="#" class="nav">메이커</a></li>
+    </ul>
+
+    <div>
+        <div class="jpg"><img src="./jpg/메인.PNG" class="img1"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="contents col-sm-8">
+                <h3 class="rankname ">영화 펀딩 추천</h3>
+                <ul>
+                    <li class="pic"><img src="./jpg/mv1.jpg" class="mv"><br><span>
+                            <h3>올드보이</h3>
+                        </span></li>
+                    <li class="pic"><img src="./jpg/mv2.jpg" class="mv"><br><span>
+                            <h3>동주</h3>
+                        </span></li>
+                    <li class="pic"><img src="./jpg/mv3.jpg" class="mv"><br><span>
+                            <h3>스파이더맨:파프롬홈</h3>
+                        </span></li>
+                    <li class="pic"><img src="./jpg/mv4.jpg" class="mv"><br><span>
+                            <h3>서부전선</h3>
+                        </span></li>
+                </ul>
+            </div>
+            <div class="chart col-sm-4">
+                <h3 class="rankname">실시간 랭킹</h3>
+                <table>
+                    <tr>
+                        <th class="rank">순위</th>
+                        <th colspan="2" style="text-align: center">펀딩</th>
+                    </tr>
+                    <tr>
+                        <td class="num">1</td>
+                        <td class="text">시인의 쉬이 많은 옥 릴케 별 자랑처럼 강아지, 이국 있습니다.</td>
+                        <td class="text"><img src="./jpg/1.jpg" class="tableimg"></td>
+                    </tr>
+                    <tr>
+                        <td class="num">2</td>
+                        <td class="text"> 내린 다 아직 듯합니다.</td>
+                        <td class="text"><img src="./jpg/2.jpg" class="tableimg"></td>
+                    </tr>
+                    <tr>
+                        <td class="num">3</td>
+                        <td class="text">하나의 이름과, 겨울이 패, 북간도에 같이 언덕 이제 듯합니다.</td>
+                        <td class="text"><img src="./jpg/3.jpg" class="tableimg"></td>
+                    </tr>
+                    <tr>
+                        <td class="num">4</td>
+                        <td class="text">나는 하나에 하나에 버리었습니다. 아무 많은 이 하나의 하나에 하나에 남은 봅니다.</td>
+                        <td class="text"><img src="./jpg/4.jpg" class="tableimg"></td>
+                    </tr>
+                    <tr>
+                        <td class="num">5</td>
+                        <td class="text">헤는 아스라히 나는 까닭입니다.</td>
+                        <td class="text"><img src="./jpg/5.jpg" class="tableimg"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

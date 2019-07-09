@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #70daea
+}
+
+.logo{
+    width: 130px;
+    height: 80px;
+    float: left;
+}
+
+.menu{
+    width: 900px;
+    margin: 0;
+    padding: 0;
+
+}
+nav {
+    float: right;
+}
+nav ul{
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    list-style:  none;
+    float:left;
+    margin-left: 75px;
+    padding: 12px 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
