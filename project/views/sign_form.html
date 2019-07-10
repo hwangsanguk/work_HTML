@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YouWantIt_회원가입</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #dedede;
+            font-family: sans-serif;
+        }
+
+        form {
+            position: relative;
+            border: 1px solid #dedede;
+            background-color: white;
+            padding: 5px;
+            width: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 12px;
+        }
+        .box{
+            position: relative;
+            left: 25px;
+            /* border:1px solid blue; */
+            width: 250px;
+        }
+
+        input {
+            border: 2px solid gray;
+            border-radius: 14px;
+            width:99%;
+            padding: 5px;
+            margin: 2px;
+            outline: none;
+        }
+        input:focus{
+         background-color: white;
+        }
+
+        .form_submit {
+            float: right;
+            width: 30%;
+            padding: 3px;
+            background-color: white;
+        }
+
+        .form_back {
+            width: 30%;
+            padding: 3px;
+            background-color: white;
+        }
+    
+        .form_submit:hover,
+        .form_back:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/sign" method=POST>
+        <h1 style="text-align: center">회원가입</h1>
+        <div class="box">
+            <input type="text" name="name" placeholder="이름">
+            <input type="text" name="id" placeholder="ID">
+            <input type="password" name="password" placeholder="password">
+            <input type="text" name="pnumber" placeholder="핸드폰">
+            <input type="text" name="email" placeholder="Email">
+            <input type="submit" class="form_submit" value="회원가입">
+            <input type="button" class="form_back" value="뒤로가기" onclick="location.href='/'">
+        </div>
+    </form>
+
+</body>
+
+</html>

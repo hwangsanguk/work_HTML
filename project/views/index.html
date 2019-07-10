@@ -20,16 +20,19 @@
             font-family: sans-serif;
             background-color: #F8F9F9;
         }
+
         div {
             margin: 0;
             padding: 0;
         }
-        .banner{
+
+        .banner {
             padding: 1px;
-            background-image: linear-gradient(to left,#f2f2f2,#dedede )
-            
+            background-image: linear-gradient(to left, #f2f2f2, #dedede)
         }
-        .login, .signin {
+
+        .login,
+        .signin {
             margin-top: 35px;
             text-decoration: none;
             text-align: center;
@@ -38,12 +41,13 @@
             margin-right: 50px;
             display: block;
         }
-        
-        .signin:hover, .login:hover{
+
+        .signin:hover,
+        .login:hover {
             text-decoration: none;
             color: gray;
         }
-        
+
         .name {
             margin-top: 10px;
             margin-left: 10px;
@@ -145,16 +149,16 @@
     <div class="banner">
         <form action="" class="banner">
 
-        <% if(locals.id) {%>
-            <%= id %> 님 환영합니다.
-            <script>
-            $('.login_hide').hide();
-            </script>
-        <%}%>
-        <a href="/signin" class="signin">회원가입</a>
-        <a href="/login" class="login">로그인</a>
-        <h3 class="name">You.Want.It?</h3>
-    </form>
+            <% if(locals.user) { %>
+            <%= user.userid %> 님 환영합니다.
+            <a href="/signin" class="signin">로그아웃</a>
+            <a href="/signin" class="signin">마이페이지</a>
+            <% }else{ %>
+            <a href="/signin" class="signin">회원가입</a>
+            <a href="/login" class="login">로그인</a>
+            <% }%>
+            <h3 class="name">You.Want.It?</h3>
+        </form>
     </div>
     <ul>
         <li><a href="#" class="nav active"><b> 추천</b></a></li>
