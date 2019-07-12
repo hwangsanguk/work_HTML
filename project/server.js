@@ -160,9 +160,6 @@ app.get('/login',(req,res)=>{
 })
 
 
-
-
-
 // test.session 시작
 app.get('/test/setsession', (req, res) => {
     console.log('/test/setsession');
