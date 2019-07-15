@@ -155,8 +155,21 @@ app.post('/sign', (req, res) => {
 });
 // 암호화 종료
 
+
+//login & logout
 app.get('/login',(req,res)=>{
     res.render('login_form.html');
+})
+
+app.get('/logout', (req,res)=>{
+    req.session.destroy(()=>{res.redirect('/');
+});
+// if(req.session.user){
+//    delete.req.session.user;
+//}
+
+
+
 })
 
 
