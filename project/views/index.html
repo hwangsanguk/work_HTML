@@ -9,11 +9,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
     <style>
-        /* *{
-        border: 1px solid blue;
-    } */
+        * {
+            font-family: 'Sunflower', sans-serif;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -26,20 +27,50 @@
             padding: 0;
         }
 
+        /* --------------------------------------------------------- */
+
         .banner {
             padding: 1px;
-            background-image: linear-gradient(to left, #f2f2f2, #dedede)
+            margin: 0px;
         }
 
-        .login,
-        .signin {
-            margin-top: 35px;
+        div.banner {
+            position: relative;
+        }
+
+        .login {
+            margin-top: 10px;
             text-decoration: none;
+            position: absolute;
+            right: 70px;
             text-align: center;
             color: gray;
-            float: right;
+            /* float: right; */
             margin-right: 50px;
             display: block;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        .signin {
+            margin-top: 10px;
+            text-decoration: none;
+            position: absolute;
+            right: 10px;
+            text-align: center;
+            color: gray;
+            /* float: right; */
+            display: block;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        #bannername {
+            margin: 0;
+            float: right;
+            margin-top: 35px;
+            padding: 0;
+            margin-right: 10px;
         }
 
         .signin:hover,
@@ -48,9 +79,48 @@
             color: gray;
         }
 
+        a.link1 {
+            display: inline-block;
+            position: absolute;
+            left: 250px;
+            top: 10px;
+            text-decoration: none;
+            color: black;
+            font-weight: 900;
+            font-size: 20px;
+
+        }
+
+        a.link2 {
+            display: inline-block;
+            position: absolute;
+            left: 170px;
+            top: 10px;
+            text-decoration: none;
+            color: black;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        /* --------------------------------------------------------- */
+        .carousel-item {
+            text-align: center;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: black;
+            height: 20px;
+        }
+
+        .container.mt-3 {
+            margin-top: 0px !important;
+        }
+
+
+        /* --------------------------------------------------------- */
         .name {
-            margin-top: 10px;
-            margin-left: 10px;
+            margin: 0 auto;
             font-size: 25px;
         }
 
@@ -63,16 +133,17 @@
             width: 20%;
             float: left;
             text-align: center;
+            font-family: 'Sunflower', sans-serif;
         }
 
-        .nav {
+        /* .nav {
             padding: 5px;
             background-color: #f1f1f1;
             border-top: 1px solid black;
             display: block;
             text-decoration: none;
             color: black;
-        }
+        } */
 
         li a.active {
             color: black;
@@ -91,7 +162,7 @@
             height: 400px;
         }
 
-        /* 우측 차트 */
+        /* 우측 차트 ------------------------------------*/
         .chart {
             border-left: 1px solid #D0D3D4;
             padding: 50px;
@@ -110,7 +181,7 @@
 
         .tableimg {
             width: 150px;
-            height: 100px;
+            height: 150px;
         }
 
         table {
@@ -126,21 +197,32 @@
             width: 50px;
         }
 
-        /* 좌측 */
+        tr,
+        td,
+        th {
+            border: 1px solid grey;
+        }
+
+        /* ----------------------------------------- */
+
+
+        /* 좌측 -------------------------------------*/
         .contents {
             margin: 0;
             padding: 0;
         }
 
         .pic {
-            width: 20%;
-            margin: 10px;
+            width: 40%;
+            margin: 25px;
         }
 
         .mv {
             width: 100%;
             height: 200px;
         }
+
+        /* --------------------------------------------------- */
     </style>
 
 </head>
@@ -150,27 +232,98 @@
         <form action="" class="banner">
 
             <% if(locals.user) { %>
-            <%= user.userid %> 님 환영합니다.
             <a href="/logout" class="signin">로그아웃</a>
             <a href="/signin" class="signin">마이페이지</a>
+            <p id="bannername"><%= user.userid %> 님 환영합니다. </p>
             <% }else{ %>
             <a href="/signin" class="signin">회원가입</a>
             <a href="/login" class="login">로그인</a>
             <% }%>
-            <h3 class="name">You.Want.It?</h3>
+            <a href="" class="link1">투자</a>
+            <a href="" class="link2">리워드</a>
+            <p class="name" style="font-weight:900">Crow.Movie</p>
+
         </form>
     </div>
-    <ul>
-        <li><a href="#" class="nav active"><b> 추천</b></a></li>
-        <li><a href="#" class="nav">얼리버드</a></li>
-        <li><a href="#" class="nav">기획전</a></li>
-        <li><a href="#" class="nav">트렌드</a></li>
-        <li><a href="#" class="nav">메이커</a></li>
-    </ul>
 
-    <div>
-        <div class="jpg"><img src="./jpg/메인.PNG" class="img1"></div>
+
+    <div class="container mt-3" style="background-color: #fef8dc; max-width:100%; ">
+        <div id="myCarousel" class="carousel slide">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li class="item1 active"></li>
+                <li class="item2"></li>
+                <li class="item3"></li>
+                <li class="item4"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="jpg/mv15.jpg" width="500" height="500">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                            aria-valuemax="100" style="width:70%;background-color: grey">
+                            <span class="sr-only">70%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="jpg/mv7.jpg" width="500" height="500">
+                    <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                                aria-valuemax="100" style="width:50%; background-color: grey">
+                                <span class="sr-only">50%</span>
+                            </div>
+                        </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="jpg/mv8.jpg" width="500" height="500">
+                    <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="93" aria-valuemin="0"
+                                aria-valuemax="100" style="width:93%;background-color: grey">
+                                <span class="sr-only">93%</span>
+                            </div>
+                        </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="jpg/mv9.jpg" width="500" height="500">
+                    <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                                aria-valuemax="100" style="width:55%; background-color: grey;">
+                                <span class="sr-only">55%</span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#myCarousel">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
     </div>
+
+    <!-- <section class="mainimage">
+            <img src="jpg/mv6.jpg" id="mv1" style="display : block;">
+            <img src="jpg/mv7.jpg" id="mv2" style="display:none;">
+            <img src="jpg/mv8.jpg" id="mv3" style="display:none;">
+            <img src="jpg/mv9.jpg" id="mv4" style="display:none;">
+            <img src="jpg/mv10.jpg" id="mv5" style="display:none;">
+    </section> -->
+
+    <!-- <div class="btn">
+        <img src="jpg/화살표1.png" id="btn1">
+        <img src="jpg/화살표2.png" id="btn2">
+    </div> -->
+
+
+
+
     <div class="container">
         <div class="row">
             <div class="contents col-sm-8">
@@ -188,44 +341,145 @@
                     <li class="pic"><img src="./jpg/mv4.jpg" class="mv"><br><span>
                             <h3>서부전선</h3>
                         </span></li>
+                    <li class="pic"><img src="./jpg/mv5.jpg" class="mv"><br><span>
+                            <h3>서부전선</h3>
+                        </span></li>
+                    <li class="pic"><img src="./jpg/mv6.jpg" class="mv"><br><span>
+                            <h3>서부전선</h3>
+                        </span></li>
                 </ul>
             </div>
             <div class="chart col-sm-4">
                 <h3 class="rankname">실시간 랭킹</h3>
                 <table>
                     <tr>
-                        <th class="rank">순위</th>
+                        <th class="rank" style="text-align:center">순위</th>
                         <th colspan="2" style="text-align: center">펀딩</th>
                     </tr>
                     <tr>
                         <td class="num">1</td>
-                        <td class="text">시인의 쉬이 많은 옥 릴케 별 자랑처럼 강아지, 이국 있습니다.</td>
-                        <td class="text"><img src="./jpg/1.jpg" class="tableimg"></td>
+                        <td class="text">
+                            <p style="text-align: center"><b>샤잠</b></p>
+                            <p style="font-size: 13px">소년 빌리 뱃슨의 이야기를 다룬 영화</p>
+                        </td>
+                        <td class="text"><img src="jpg/mv10.jpg" class="tableimg"></td>
                     </tr>
                     <tr>
                         <td class="num">2</td>
-                        <td class="text"> 내린 다 아직 듯합니다.</td>
-                        <td class="text"><img src="./jpg/2.jpg" class="tableimg"></td>
+                        <td class="text">
+                            <p style="text-align: center"><b>알라딘</b></p>
+                            <p style="font-size: 13px">알라딘과 마법의 램프 이야기</p>
+                        </td>
+                        <td class="text"><img src="jpg/mv11.jpg" class="tableimg"></td>
                     </tr>
                     <tr>
                         <td class="num">3</td>
-                        <td class="text">하나의 이름과, 겨울이 패, 북간도에 같이 언덕 이제 듯합니다.</td>
-                        <td class="text"><img src="./jpg/3.jpg" class="tableimg"></td>
+                        <td class="text">
+                            <p style="text-align: center"><b>드래곤 길들이기</b>
+                                <p style="font-size: 13px">드래곤 투슬리스와 바이킹히컵의 우정에 관한 영화</p>
+                        </td>
+                        <td class="text"><img src="jpg/mv12.jpg" class="tableimg"></td>
                     </tr>
                     <tr>
                         <td class="num">4</td>
-                        <td class="text">나는 하나에 하나에 버리었습니다. 아무 많은 이 하나의 하나에 하나에 남은 봅니다.</td>
-                        <td class="text"><img src="./jpg/4.jpg" class="tableimg"></td>
+                        <td class="text">
+                            <p style="text-align: center"><b>불한당</b></p>
+                            <p style="font-size: 13px">두 사람의 숨겨왔던 야망이 조금씩 드러나고, 서로에 대해 새로운 사실을 알게 되면서 그들의 관계는 흔들리기
+                                시작하는데… </p>
+                        </td>
+                        <td class="text"><img src="jpg/mv13.jpg" class="tableimg"></td>
                     </tr>
                     <tr>
                         <td class="num">5</td>
-                        <td class="text">헤는 아스라히 나는 까닭입니다.</td>
-                        <td class="text"><img src="./jpg/5.jpg" class="tableimg"></td>
+                        <td class="text">
+                            <p style="text-align: center"><b>타이타닉</b></p>
+                            <p style="font-size: 13px">진실한 사랑을 꿈꾸던 로즈 또한 생애 처음 황홀한 감정에 휩싸이고, 둘은 운명 같은 사랑에 빠지는데…</p>
+                        </td>
+                        <td class="text"><img src="jpg/mv14.jpg" class="tableimg"></td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+            // Activate Carousel
+            $("#myCarousel").carousel();
+
+            // Enable Carousel Indicators
+            $(".item1").click(function () {
+                $("#myCarousel").carousel(0);
+            });
+            $(".item2").click(function () {
+                $("#myCarousel").carousel(1);
+            });
+            $(".item3").click(function () {
+                $("#myCarousel").carousel(2);
+            });
+            $(".item4").click(function () {
+                $("#myCarousel").carousel(3);
+            });
+
+            // Enable Carousel Controls
+            $(".carousel-control-prev").click(function () {
+                $("#myCarousel").carousel("prev");
+            });
+            $(".carousel-control-next").click(function () {
+                $("#myCarousel").carousel("next");
+            });
+        });
+    </script>
+
+    <!-- <script>
+    var mv1 = document.getElementById('mv1');
+    var mv2 = document.getElementById('mv2');
+    var mv3 = document.getElementById('mv3');
+    var mv4 = document.getElementById('mv4');
+    var mv5 = document.getElementById('mv5');
+
+    var back = document.getElementById('btn1');
+    var next = document.getElementById('btn2');
+    var count = 1 ;
+    imgview();
+   
+   
+    back.addEventListener('click',function(){
+        if(count >1){
+            count --;
+            imgview();
+        }
+    })
+    next.addEventListener('click',function(){
+        if(count<5){
+            count ++;
+            imgview();
+        }
+    })
+    function imgview(){
+        mv1.style.display="none";
+        mv2.style.display="none";
+        mv3.style.display="none";
+        mv4.style.display="none";
+        mv5.style.display="none";
+        
+        if(count ==1){
+            mv1.style.display="block";
+        } else if (count ==2) {
+            mv2.style.display="block";
+        } else if (count == 3){
+            mv3.style.display="block";
+        } else if (count == 4){
+            mv4.style.display="block";
+        } else if (count == 5){
+            mv5.style.display="block";
+        }
+        
+    } -->
+
+    </script>
 </body>
 
 </html>
