@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+// for 문을 통한 1부터 N까지의 합이 100,000보다 작은 수 구하기
+    sum = 0
+    for (i=1 ; sum<100000 ; i++){   
+    //for 구문에서 (i=1 ; sum<100000; i++)는 i의시작값은 1 이고 i++를 해준뒤 sum<100000을 비교해줌 -(1)   
+        sum=sum+i;}
+
+        document.write("N = "+(i-1)+"합은"+sum+"<br>"); //-(2)
+        //(2)는 (1) 에 의해서 (i-1) 인 이유가 sum이 10만이 넘어도 
+        //i++이 실행된 뒤에 멈추기 때문에  i-1을 해 주는 것이다.
+//---------------------------------------------------------
+
+
+
+//for ~ for 문을 통한 제곱 수 구하기
+    document.write("<table border=1 text-align=center>");
+    document.write("<tr><td>n</td><td>n제곱</td><td>n세제곱</td><td>n네제곱</td></tr>");
+    for (n=1 ;n<=5; n++){
+        document.write("<tr>");
+        result = n
+        document.write("<td>"+result+"</td>");
+        for(k=1; k<4;k++){ //3번을 실행하겠다는 의미
+            result =result*n;
+            document.write("<td>"+result+"</td>");
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+//---------------------------------------------------------
+
+
+
+//continue 문을 통한 7(변수)의 배수 를 제외한 합 구하기 
+
+sum=0 , count = 0
+for(i=1 ; i<=100; i++){
+    if(i%7 == 0) { count++;
+    continue;
+    }
+    sum = sum +i ;
+}
+document.write("7의 배수 제외 개수:"+ count+"<br>");
+document.write("7의 배수를 제외한 합"+sum);
+//---------------------------------------------------------
+
+</script>    
+</body>
+</html>

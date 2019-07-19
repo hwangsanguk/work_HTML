@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//continue 를 활용한 for 문 예제----------------------
+    str=''
+    for(i=1; i++<=50;i++){
+        console.log("(1)"+i);
+        str = str+'*'
+        if(i%5 !=0)continue;
+        console.log("(2)"+i);
+        i=i+1;
+        console.log("(3)"+i);
+    }
+    document.write("(1)"+str);
+    console.log("--------------------");
+    document.write("<hr>");
+    
+//-----------------------------------------------------
+
+
+//continue 를 활용한 while 문 예제----------------------
+    str='', a=1;
+    while(a++<=50){
+        console.log("(1)"+a);
+        str=str+'*'
+        if(a%5 !=0) continue;
+        console.log("(2)"+a);
+        a= a+1;
+        console.log("(3)"+a);
+        a= a+1;
+        console.log("(4)"+a);
+    }
+    document.write("(2)"+str)
+    console.log("--------------------");
+    document.write("<hr>");
+//----------------------------------------------------
+
+
+
+//continue 를 활용한 do~while 문 (1)예제----------------------
+    str='',b=1
+    do{
+        console.log("(1)"+b);
+        b=b+1;
+        console.log("(2)"+b);
+        str=str+'*'
+        if(b%5 !=0) continue;
+        console.log("(3)"+b);
+        b=b+1;
+        console.log("(4)"+b);
+    }while(b++<=50);
+    document.write("(3)"+str);
+    console.log("--------------------");
+    document.write("<hr>");
+//----------------------------------------------------------
+
+
+//continue 를 활용한 do~while 문 (2)예제----------------------
+    str='', c=1
+    do {
+        console.log("(1)"+c);
+        str= str+'*'
+        if(c%5 !=0) continue;
+        c = c+1;
+        console.log("(2)"+c);
+        c = c+1;
+        console.log("(3)"+c);
+    }while(c++<=50);
+    document.write("(4)"+str);
+//-----------------------------------------------------------
+
+    </script>
+    
+</body>
+</html>

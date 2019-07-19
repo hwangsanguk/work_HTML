@@ -1,0 +1,104 @@
+<button onclick="solve()">click</button>
+
+<script>
+//function name(인수1,인수2.....,인수n){
+//  지역변수 선언; 함수의 명령코드들; return 반환값; 등 을 적어줌
+//  }
+
+
+//ex01--------------------------------------------------
+function f1(n) {
+    var result = 1;
+    var num = Number(n);
+    for(i=1 ; i<=num; i++) result*=i;
+    return result;
+    
+}
+function f2(n) {
+    var result = 1;
+    var num = Number(n);
+    for(i=1 ; i<=num; i++) result*=i;
+    document.write(n+"! ="+ result+"<br>");
+    return result;
+}
+
+for (j=1 ; j<=10; j++){
+    console.log("(1)"+j);
+    if(j/2*2 ==j)
+     console.log("(2)"+j);
+    document.write(j+"!="+f1(j)+"<br>");
+    document.write("<hr>")
+}
+
+//------------------------------------------------------
+
+
+//지역 변수와 전역 변수
+//ex02--------------------------------------------------
+var a="globalA", b="globalB", c="globalC";
+function f4(){
+    var b ="localB";
+    var d ="localD";
+    document.write("함수 내에서 f4출력 <br>")
+    document.write("a ="+a+"<br>");
+    document.write("b ="+b+"<br>");
+    document.write("this.b ="+this.b+"<br>");
+    document.write("c ="+c+"<br>");
+    document.write("d ="+d+"<br>");
+}
+f4();
+
+document.write("함수 밖에서 f4출력 <br>")
+    document.write("a ="+a+"<br>");
+    document.write("b ="+b+"<br>");
+    document.write("this.b ="+this.b+"<br>");
+    document.write("c ="+c+"<br>");
+    document.write("d ="+d+"<br>");
+// 전역변수(함수밖에서 지정) 하고 함수 내부에서 사용 할 수 있지만 
+// 지역변수가 설정 되어있으면 함수내에서 실행시 전역변수< 지역변수가 되어 지역 변수로 출력이됨
+// 지역변수 값에 영향을 벗어나려면 this.전역변수 값을 입력해야함
+// 함수밖에서는 전역변수 들로만 출력이 됨
+//-----------------------------------------------------------------------------------
+
+
+
+// 자바 스크립트를 통한 2차 방정식의 근 구하기 ---------------------------------
+document.write("<hr>");
+
+function solve() {
+    var a1 =prompt("2차 방정식의 2차항의 계수는 ?");
+    var b1 =prompt("2차 방정식의 1차항의 계수는 ?");
+    var c1 =prompt("2차 방정식의 상수항의 계수는?");
+    a=parseInt(a1), b= parseInt(b1), c= parseInt(c1);
+    d=b*b-4*a*c;
+
+if(a == 0) {alert("2차항의 계수가 존재하지 않음")}
+else if(d<0) {alert("근이 존재하지 않음")}
+else if(d==0) {
+    root1 = (-b+Math.sqrt(d))/(2*a);
+    alert("중근 : "+ root1.toPrecision(3));
+}
+else {
+    root1 =(-b+Math.sqrt(d))/(2*a);
+    root2 =(-b-Math.sqrt(d))/(2*a);
+    alert("서로 다른 두 실근 : "+root1.toPrecision(3)+","+root2.toPrecision(3));
+}   
+}
+//책 HTML5 웹프로그래밍(조동영) chap6. 305p 에 오타 있음 toPresion=>toPrecision 으로 바꿔야함
+
+
+//함수의 인수 전달 
+//ex03
+function f5(x,y,z){
+    document.write("첫번째 :" +x+"<br>");
+    document.write("첫번째 :" +y+"<br>");
+    document.write("첫번째 :" +z+"<br>");
+    document.write("<hr>");
+}
+
+f5(10,20,30);
+f5(30,56);
+f5(10,14,52,316);
+
+
+</script>

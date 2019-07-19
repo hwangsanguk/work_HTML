@@ -1,0 +1,46 @@
+<!-- 배열(Array) 
+새 배열은 new Array로 생성 즉,  new Array = []
+예) var c=[[1,2,3],[4,5,6],[7,8,9]]  <=>  var c = newArray(Array(1,2,3,),Array(4,5,6),Array(7,8,9))
+-->
+
+<!-- Array 안 원소를 꺼내올때는 for~for 구문을 통해 가져오기 -->
+
+<script>
+var subject = ["algorithm","Data Structure", "Computer network", "DB"];
+for (i=0; i<subject.length; i ++) document.write(subject[i]+"<hr>");
+    for (var i in subject) document.write(subject[i]+"<hr>");
+for (var a in subject);
+console.log(a);
+console.log(subject);
+console.log(subject.a);
+document.write(subject.a+"<hr>");// 사용 할 수 없음; 사용 해도 다른 언어 사용할때 안좋음
+
+
+var students =['kang','kim','sin','lee','joo'];
+
+// students['전입생1']='hwang';
+students.push('hwang2');
+students['전입생2']='hong';
+
+
+
+//----------------------------------------------------
+document.write("<h3>학생명단<h3><hr>");
+for(i=0 ; i < students.length; i++){
+    document.write(students[i]);
+    document.write("<hr>")
+}
+// students 의 index가 0,1,2,3,4,전입생2 로 되어있어 hong이 출력 되지 않음
+
+//----------------------------------------
+for(var i in students){
+    console.log(students);
+    
+    document.write(students[i]+"<br>");
+}
+//for~in 구문을  통해 index의 값이 어떤 것이든 출력 가능하게 나타내줌
+
+
+
+
+</script>
