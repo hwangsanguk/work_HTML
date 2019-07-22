@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const cookieparser = require('cookie-parser');
-const port = 3000;
+const port = 5050;
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 var hasher = require('pbkdf2-password')();
@@ -169,7 +169,30 @@ app.get('/logout', (req,res)=>{
 //}
 
 
+})
 
+//mvintroduce 페이지로
+let mvnames=[]
+
+app.get('/movie/:name', (req,res)=>{
+    console.log(req.params.name);
+    let mvname = req.params.name;
+    console.log("mvname : ", mvname);
+
+    let mvnames ={
+        mvname :mvname
+    };
+    console.log("mvnames: ", mvnames);
+    
+    res.render('mvintroduce.html',mvnames);
+})
+
+
+
+//Reward 페이지로
+
+app.get('/Reward',(req,res)=>{
+    res.render('Reward.html');
 })
 
 
