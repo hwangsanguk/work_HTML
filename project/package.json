@@ -19,6 +19,7 @@
     "express-session": "^1.16.2",
     "http-proxy-middleware": "^0.19.1",
     "morgan": "^1.9.1",
+    "multer": "^1.4.2",
     "node-sass": "^4.12.0",
     "pbkdf2-password": "^1.2.1",
     "react-router-dom": "^5.0.1",

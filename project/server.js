@@ -7,8 +7,9 @@ const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 var hasher = require('pbkdf2-password')();
 const morgan = require('morgan');
-const fs = require('fs')
+const fs = require('fs');
 
+//-----------미들웨어-------------------------------------------------
 //html 렌더링 설정 ,ejs
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs'); //ejs view engine을 express를 통해 사용한다
@@ -50,7 +51,13 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
+//------router----------------------------------------------
+var routerserver = require('./router/routerin.js')();
 
+console.log('요청받음');
+app.use('/inves', routerserver);
+
+//-----------------------------------------------------------------------------------------------
 // index
 app.get('/',(req,res)=>{
     res.render('index.html');
@@ -59,6 +66,8 @@ app.get('/',(req,res)=>{
 app.post('/',(req,res)=>{
     res.render('index.html')
 })
+
+
 
 //Login_session 시작
 app.get('/login', function (req, res) {
@@ -169,6 +178,13 @@ app.get('/logout', (req,res)=>{
 //}
 
 
+})
+
+
+//mypage
+
+app.get('/mypage', (req,res)=>{
+    res.render('mypage.html');
 })
 
 //mvintroduce 페이지로

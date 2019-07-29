@@ -7,7 +7,7 @@
     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-    <title>Document</title>
+    <title>Reward</title>
     <style>
         a{
             color: #000;
@@ -43,7 +43,8 @@
                 var squareStyle ={
                     height: "200px",
                     backgroundImage: this.props.img,
-                    backgroundSize: "100% 100%"
+                    backgroundSize: "100% 100%",
+                    borderRadius:"12px"
                 }
                 return(
                     <div style={squareStyle}></div>
@@ -60,7 +61,8 @@
                     backgroundColor: "#fff",
                     display: "inline-block",
                     boxShadow:"0px 0px 3px #666",
-                    margin: "10px"
+                    margin: "10px",
+                    borderRadius:"12px"
                 }
                 return(
                     <div style={cardstyle}>
@@ -75,25 +77,28 @@
 
         class Reward extends React.Component {
             render() {
+                var bodystyle ={
+                    backgroundColor:"#fef8dc"
+                }
                 return (
-                    <div>
+                    <div style={bodystyle}>
                         <h1>리워드</h1>
-                        <a href="#"> <ImgCard img="url(./jpg/mv1.jpg)" text="올드보이"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv2.jpg)" text="동주"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv3.jpg)" text="스파이더맨"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv4.jpg)" text="서부전선"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv5.jpg)" text="라이온킹"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv6.jpg)" text="악인전"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv7.jpg)" text="토이스토리4"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv8.jpg)" text="사일런스"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv9.jpg)" text="존윅3"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv10.jpg)" text="샤잠"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv11.jpg)" text="알라딘"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv12.jpg)" text="드래곤"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv13.jpg)" text="불한당"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv14.jpg)" text="타이타닉"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv15.jpg)" text="부산행"/></a>
-                        <a href="#"><ImgCard img="url(./jpg/mv16.jpg)" text="미녀와야수"/></a>
+                        <a href="movie/mv1"> <ImgCard img="url(./jpg/mv1.jpg)" text="올드보이"/></a>
+                        <a href="movie/mv2"><ImgCard img="url(./jpg/mv2.jpg)" text="동주"/></a>
+                        <a href="movie/mv3"><ImgCard img="url(./jpg/mv3.jpg)" text="스파이더맨"/></a>
+                        <a href="movie/mv4"><ImgCard img="url(./jpg/mv4.jpg)" text="서부전선"/></a>
+                        <a href="movie/mv5"><ImgCard img="url(./jpg/mv5.jpg)" text="라이온킹"/></a>
+                        <a href="movie/mv6"><ImgCard img="url(./jpg/mv6.jpg)" text="악인전"/></a>
+                        <a href="movie/mv7"><ImgCard img="url(./jpg/mv7.jpg)" text="토이스토리4"/></a>
+                        <a href="movie/mv8"><ImgCard img="url(./jpg/mv8.jpg)" text="사일런스"/></a>
+                        <a href="movie/mv9"><ImgCard img="url(./jpg/mv9.jpg)" text="존윅3"/></a>
+                        <a href="movie/mv10"><ImgCard img="url(./jpg/mv10.jpg)" text="샤잠"/></a>
+                        <a href="movie/mv11"><ImgCard img="url(./jpg/mv11.jpg)" text="알라딘"/></a>
+                        <a href="movie/mv12"><ImgCard img="url(./jpg/mv12.jpg)" text="드래곤"/></a>
+                        <a href="movie/mv13"><ImgCard img="url(./jpg/mv13.jpg)" text="불한당"/></a>
+                        <a href="movie/mv14"><ImgCard img="url(./jpg/mv14.jpg)" text="타이타닉"/></a>
+                        <a href="movie/mv15"><ImgCard img="url(./jpg/mv15.jpg)" text="부산행"/></a>
+                        <a href="movie/mv16"><ImgCard img="url(./jpg/mv16.jpg)" text="미녀와야수"/></a>
                     </div>
                 );
             }
